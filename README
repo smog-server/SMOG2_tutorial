@@ -1,6 +1,6 @@
 ################################################################################
 
-						README for SMOG2_tutorial
+			README for SMOG2_tutorial
 
 
 SMOG2_tutorial is a repository made to support everyone who wants to start
@@ -14,7 +14,8 @@ This distribution contains the input and some output files obtained while
 simulating the Chymotrypsin inhibitor 2 (CI-2) dynamics over a range of 
 temperatures, to check some of its properties. 
 
-The file "roadmap.txt" contains the set of commands to reproduce all the results. These commands were used in a Linux-based system, though small
+The file "roadmap.txt" contains the set of commands to reproduce all the results.
+These commands were used in a Linux-based system, though small
 changes should be needed to use them in any Operational System. Each command (or
 set of commands) is preceded by comments on how they operate or what should be 
 expected from it/them.
@@ -25,7 +26,8 @@ following the steps presented in the "roadmap.txt"
 
 The folder AA contains all the input files used in the simulations. The force 
 field files are there, with some output files acquired using the roadmap given. 
-Most heavy files were not saved to save the repository space (XTC, TRR, EDR, and LOG files).
+Most heavy files were not saved to save the repository space (XTC, TRR, EDR, 
+and LOG files).
 
 All comments, suggestions, questions, or feedback are welcomed. 
 Please reach out through the repository channel or by e-mail.
