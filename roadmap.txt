@@ -98,14 +98,32 @@ done
 # Control to wait for all the remaining executions to take place before the next step
 wait;
 
+# Now a set of files will be created with two columns: first the potential energy and the second will be the number of native contacts. The columns must be space delimited to be used in the program WHAM.jar, distributed with the SMOG2 package. 
+# This sequence will generate the file "e-Q.dat" for all run temperatures.
+
+for j in `ls -d */`; 
+do 
+  echo $j; 
+  i=${j::-1};
+  echo $i;
+  cd $i;
+  paste -d " " energy.dat contacts-AA-$i.dat > e-Q.dat;
+  sleep 1;
+  cd ..; 
+done
+
+
 # To run WHAM, one may go to the folder:
 
 cd wham/first;
 
+# To run the WHAM.jar program, one must define a configuration file. Here goes an example in the file "config_wham.txt".
 # And execute it:
 java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt 
 
-# Note: more information about WHAM.jar package and its requisites can be found at http://smog-server.org
+# NOTE: $SMOG_FOLDER is the parent folder where your smog2 folder is placed. Please make sure to change this accordingly. 
+# The WHAM.jar output files have the unbiased free energies for the selected temperatures (in the config_wham.txt file). Note also that the config_wham.txt file settings should reflect the values found in the e-Q.dat files. For example, the bin size and number of bins shall be chosen to cover the sampled range of each variable (energy and number of contacts). 
+# To more details, check the SMOG2 manual at http://smog-server.org
 
 
 # Checking the specific heat from the WHAM run, as the peak is around 122 and the free energies have not shown a smooth profile, the sampling around 122 may be improved.
@@ -169,6 +187,21 @@ done
 wait;
 
 
+# Now a set of files will be created with two columns: first the potential energy and the second will be the number of native contacts. The columns must be space delimited to be used in the program WHAM.jar, distributed with the SMOG2 package. 
+# This sequence will generate the file "e-Q.dat" for all run temperatures.
+
+for j in `ls -d */`; 
+do 
+  echo $j; 
+  i=${j::-1};
+  echo $i;
+  cd $i;
+  paste -d " " energy.dat contacts-AA-$i.dat > e-Q.dat;
+  sleep 1;
+  cd ..; 
+done
+
+
 # To run WHAM, one may go to the folder:
 
 cd wham/second;
@@ -176,11 +209,90 @@ cd wham/second;
 # And execute it:
 java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt 
 
-# Note: more information about WHAM.jar package and its requisites can be found at http://smog-server.org
-
 
 # Checking the specific heat from the WHAM run, as the peak is around 122 and the free energies have not shown a smooth profile, the sampling around 122 may be improved.
 
 cd ../../
 
 # Now, both specific heat peak and free-energy profiles show the folding temperature should be close to T=119.[4-8]. So, the next range of simulated temperatures should be in this interval.
+
+
+temperatures="119.1 119.2  119.4 119.6 119.8"
+steps="100000000"
+
+# Again the file "example-2.mdp" will be used. 
+
+for i in $temperatures;
+do
+  mkdir $i;
+  cd $i/
+  sed 's/TEMP/'"$i"'/g;s/TSTEPS/'"$steps"'/g' ../example-2.mdp > reference.mdp
+  cd ../
+done
+
+# The TPR file for each temperature is created here using the MDP, GRO, and force field files.
+
+for i in $temperatures;
+do
+  cd $i/;
+  $cmdgmx grompp -f reference.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-$i-ci2.tpr &>> ../out-all-grompp-AA.dat;
+  cd ..;
+done
+
+# Running the simulation for each temperature at a time.
+
+for i in $temperatures;
+do
+  cd $i/;
+  sleep 1
+  echo "Running the simulation"
+  $cmdgmx mdrun -v -deffnm t-$i-ci2 -noddcheck -ntomp $nompt;
+  cd ..;
+done
+
+# Extracting the number of native contacts for each frame.
+
+for i in $temperatures;
+do
+  cd $i/;
+  time python3 ../../contacts_chunk.py AA ../ci2-AA-box.gro t-$i-ci2.xtc ../file.cont contacts-AA-$i.dat &>> ../out-contacts-AA.dat & 
+  cd ..;
+done
+
+# This sequence will extract the potential energy for each frame. 
+
+for i in $temperatures;
+do
+  cd $i;
+  echo 9 | $cmdgmx energy -f t-$i-ci2.edr -s t-$i-ci2.tpr;
+  sed '1,23d' energy.xvg | awk '{print $2}' > energy.dat &
+  sed '1,23d' energy.xvg | awk '{print $1}' > timestep-$i.dat 
+  cd ../
+done
+
+# Control to wait for all the remaining executions to take place before the next step
+wait;
+
+# Now a set of files will be created with two columns: first the potential energy and the second will be the number of native contacts. The columns must be space delimited to be used in the program WHAM.jar, distributed with the SMOG2 package. 
+# This sequence will generate the file "e-Q.dat" for all run temperatures.
+
+for j in `ls -d */`; 
+do 
+  echo $j; 
+  i=${j::-1};
+  echo $i;
+  cd $i;
+  paste -d " " energy.dat contacts-AA-$i.dat > e-Q.dat;
+  sleep 1;
+  cd ..; 
+done
+
+
+# To run WHAM, one may go to the folder:
+
+cd wham/second;
+
+# And execute it:
+java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt 
+
+cd ../../
