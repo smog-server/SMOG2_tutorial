@@ -1,6 +1,6 @@
 ################################################################################
 
-			README for SMOG2_tutorial
+                         README for SMOG2_tutorial
 
 
 SMOG2_tutorial is a repository made to support everyone who wants to start
@@ -19,6 +19,11 @@ These commands were used in a Linux-based system, though small
 changes should be needed to use them in any Operational System. Each command (or
 set of commands) is preceded by comments on how they operate or what should be 
 expected from it/them.
+
+To evaluate the number of native contacts formed at each frame, it is used a 
+python3 script called "contacts_chunk.py". The requirements to run it are 
+described in the file "requirements.dat", which can be used alongside pip or 
+conda/miniconda to install the libraries.
 
 The file "2ci2.pdb" is the CI-2 structure downloaded from the PDB web server 
 without any change. The other PDB files are modified versions, obtained 
