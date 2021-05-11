@@ -1,0 +1,3 @@
+[submodule "contacts-python"]
+	path = contacts-python
+	url = https://github.com/fredcfreitas/contacts-python.git
