@@ -1,0 +1,359 @@
+#### Roadmap:
+
+# First we have to set some environmental variables
+
+# For example: which command is used to call gromacs? If you are using an installation without MPI support, use "gmx". If you have MPI support, use "gmx_mpi", for example. In this case, it will be:
+
+cmdgmx="gmx"
+
+# Now, we have to set the number of OpenMP threads to be used. We are assuming simulations using one node/computer. If you are using a PC, the better option here is the default (0). In this case, it will use the number set by the environment variable (OMP_NUM_THREADS).
+
+nompt=$OMP_NUM_THREADS
+
+# The downloaded PDB file is called 2ci2.pdb. The file ci2-clean.pdb is derived from the original, with just the lines beginning with ATOM, TER, and END remaining. The other lines were deleted. The HETATM entries in this PDB are just some water molecules that will not be used in our simulations and were also deleted.
+
+# In this step the cleaned PDB file will be adjusted. The smog_adjustPDB function, in its standard options, will change the residue names accordingly to the atom sequence, if any other map is provided. Other changes in the format will be made in order to make the output file more suitable to generate the force field. If needed, the atoms will be renumbered or TER lines will be added. None was needed in this case. The output is in the file "out-smog_adjustPDB.dat".
+
+smog_adjustPDB -i ci2-clean.pdb -o ci2-adjusted.pdb > out-smog_adjustPBD.dat
+
+# Now the force field will be generated for the All-atom model. The output is in the file "out-smog2-AA.dat"
+
+smog2 -i ci2-adjusted.pdb -dname ci2-AA -AA &>> out-smog2-AA.dat
+
+
+# Creating the folder to run the simulations and put all the force field files in it.
+
+mkdir AA
+mv ci2-AA* AA/
+cd AA/
+
+# From the ci2-AA.top file, extract the "[ pairs ]" section, and create the file.cont file. This file will be used as a reference to count the native contacts.
+
+
+# Creating an initial file with the selected molecule (the "atom" beads, in this case), and enlarging the simulation box (to avoid hitting the boundaries during the simulations. 
+
+$cmdgmx editconf -f ci2-AA.gro -c -d 10 -o ci2-AA-box.gro -bt cubic &>> out-editconf-AA.dat
+
+# The file example.mdp is an example MDP file (MDP: Molecular Dynamics Parameters file) used in SMOG simulations. This file was created using the example found in the SMOG2 package and changing the number of simulated steps to TSTEPS and the temperature to TEMP. This will be used ahead.
+
+# Here the folders and the MDP files for each temperature are created 
+
+temperatures="80 90 100 110 120 130 140 150"
+steps="10000000"
+
+# In this step the temperature and the number of steps will be replaced in the MDP file, and the output will be saved in the correspondent folder.
+
+for i in $temperatures;
+do
+  mkdir $i;
+  cd $i/
+  sed 's/TEMP/'"$i"'/g;s/TSTEPS/'"$steps"'/g' ../example.mdp > reference.mdp
+  cd ../
+done
+
+# The TPR file for each temperature is created here, using the MDP, GRO, and force field files.
+
+for i in $temperatures;
+do
+  cd $i/;
+  $cmdgmx grompp -f reference.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-$i-ci2.tpr &>> ../out-all-grompp-AA.dat;
+  cd ..;
+done
+
+# Running the simulation for each temperature at a time. Note that this command will work with a non-MPI compiled GROMACS. Some additions/changes have to be made when using MPI compiled versions.
+
+for i in $temperatures;
+do
+  cd $i/;
+  sleep 1
+  echo "Running the simulation"
+  $cmdgmx mdrun -v -deffnm t-$i-ci2 -noddcheck -ntomp $nompt;
+  cd ..;
+done
+
+# The file out-mdrun-AA.dat shows a header that should appear while running the simulation. This will change depending on your computer, gromacs version and/or installation. In this case, just the output for the first temperature is shown for simplicity. The others are analogs.
+
+################################################################################
+# The analysis part will begin here. The next sequence is made to extract the total number of native contacts formed for each frame. 
+# NOTE: make sure you have python3 and all needed packages installed and loaded.
+# To make this sure, please consider installing the packages in the "requirements.txt" file.
+
+for i in $temperatures;
+do
+  cd $i/;
+  time python3 ../../contacts_chunk.py AA ../ci2-AA-box.gro t-$i-ci2.xtc ../file.cont contacts-AA-$i.dat &>> ../out-contacts-AA.dat & 
+  cd ..;
+done
+
+# This sequence will extract the potential energy for each frame. 
+for i in $temperatures;
+do
+  cd $i;
+  echo 9 | $cmdgmx energy -f t-$i-ci2.edr -s t-$i-ci2.tpr;
+  sed '1,23d' energy.xvg | awk '{print $2}' > energy.dat &
+  sed '1,23d' energy.xvg | awk '{print $1}' > timestep-$i.dat 
+  cd ../
+done
+
+# Control to wait for all the remaining executions to take place before the next step
+wait;
+
+
+# This first run should use a wide range of temperatures, once we supposedly do not know the folding temperature. After checking the transitions between the folded and unfolded state, in this case, the folding temperature should be close to 120. In the next step, two temperatures were selected and some of the previous steps were taken.
+
+temperatures="119 120.1" 
+steps="500000000"
+
+# Now the file "example-2.mdp" will be used. This new MDP file will not save the forces file during the simulations, once we are not planning to use it during the analysis. You can check the difference between example.mdp and example-2.mdp to make sure this will be the only change.
+
+for i in $temperatures;
+do
+  mkdir $i;
+  cd $i/
+  sed 's/TEMP/'"$i"'/g;s/TSTEPS/'"$steps"'/g' ../example-2.mdp > reference.mdp
+  cd ../
+done
+
+# The TPR file for each temperature is created here using the MDP, GRO, and force field files.
+
+for i in $temperatures;
+do
+  cd $i/;
+  $cmdgmx grompp -f reference.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-$i-ci2.tpr &>> ../out-all-grompp-AA.dat;
+  cd ..;
+done
+
+# Running the simulation for each temperature at a time.
+
+for i in $temperatures;
+do
+  cd $i/;
+  sleep 1
+  echo "Running the simulation"
+  $cmdgmx mdrun -v -deffnm t-$i-ci2 -noddcheck -ntomp $nompt;
+  cd ..;
+done
+
+# Extracting the number of native contacts for each frame.
+
+for i in $temperatures;
+do
+  cd $i/;
+  time python3 ../../contacts_chunk.py AA ../ci2-AA-box.gro t-$i-ci2.xtc ../file.cont contacts-AA-$i.dat &>> ../out-contacts-AA.dat & 
+  cd ..;
+done
+
+# This sequence will extract the potential energy for each frame. 
+
+for i in $temperatures;
+do
+  cd $i;
+  echo 9 | $cmdgmx energy -f t-$i-ci2.edr -s t-$i-ci2.tpr;
+  sed '1,23d' energy.xvg | awk '{print $2}' > energy.dat &
+  sed '1,23d' energy.xvg | awk '{print $1}' > timestep-$i.dat 
+  cd ../
+done
+
+# Control to wait for all the remaining executions to take place before the next step
+wait;
+
+# Time to check the transitions found. The current results lead to the next selected temperatures to run:
+
+temperatures="121 122 123 124"
+steps="500000000"
+
+# Again the file "example-2.mdp" will be used. 
+
+for i in $temperatures;
+do
+  mkdir $i;
+  cd $i/
+  sed 's/TEMP/'"$i"'/g;s/TSTEPS/'"$steps"'/g' ../example-2.mdp > reference.mdp
+  cd ../
+done
+
+# The TPR file for each temperature is created here using the MDP, GRO, and force field files.
+
+for i in $temperatures;
+do
+  cd $i/;
+  $cmdgmx grompp -f reference.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-$i-ci2.tpr &>> ../out-all-grompp-AA.dat;
+  cd ..;
+done
+
+# Running the simulation for each temperature at a time.
+
+for i in $temperatures;
+do
+  cd $i/;
+  sleep 1
+  echo "Running the simulation"
+  $cmdgmx mdrun -v -deffnm t-$i-ci2 -noddcheck -ntomp $nompt;
+  cd ..;
+done
+
+# Extracting the number of native contacts for each frame.
+
+for i in $temperatures;
+do
+  cd $i/;
+  time python3 ../../contacts_chunk.py AA ../ci2-AA-box.gro t-$i-ci2.xtc ../file.cont contacts-AA-$i.dat &>> ../out-contacts-AA.dat & 
+  cd ..;
+done
+
+# This sequence will extract the potential energy for each frame. 
+
+for i in $temperatures;
+do
+  cd $i;
+  echo 9 | $cmdgmx energy -f t-$i-ci2.edr -s t-$i-ci2.tpr;
+  sed '1,23d' energy.xvg | awk '{print $2}' > energy.dat &
+  sed '1,23d' energy.xvg | awk '{print $1}' > timestep-$i.dat 
+  cd ../
+done
+
+# Control to wait for all the remaining executions to take place before the next step
+wait;
+
+# Time to check the transitions found. The current results lead to the next selected temperatures to run:
+
+temperatures="119.1 119.2  119.4 119.6 119.8"
+steps="100000000"
+
+# Again the file "example-2.mdp" will be used. 
+
+for i in $temperatures;
+do
+  mkdir $i;
+  cd $i/
+  sed 's/TEMP/'"$i"'/g;s/TSTEPS/'"$steps"'/g' ../example-2.mdp > reference.mdp
+  cd ../
+done
+
+# The TPR file for each temperature is created here using the MDP, GRO, and force field files.
+
+for i in $temperatures;
+do
+  cd $i/;
+  $cmdgmx grompp -f reference.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-$i-ci2.tpr &>> ../out-all-grompp-AA.dat;
+  cd ..;
+done
+
+# Running the simulation for each temperature at a time.
+
+for i in $temperatures;
+do
+  cd $i/;
+  sleep 1
+  echo "Running the simulation"
+  $cmdgmx mdrun -v -deffnm t-$i-ci2 -noddcheck -ntomp $nompt;
+  cd ..;
+done
+
+# Extracting the number of native contacts for each frame.
+
+for i in $temperatures;
+do
+  cd $i/;
+  time python3 ../../contacts_chunk.py AA ../ci2-AA-box.gro t-$i-ci2.xtc ../file.cont contacts-AA-$i.dat &>> ../out-contacts-AA.dat & 
+  cd ..;
+done
+
+# This sequence will extract the potential energy for each frame. 
+
+for i in $temperatures;
+do
+  cd $i;
+  echo 9 | $cmdgmx energy -f t-$i-ci2.edr -s t-$i-ci2.tpr;
+  sed '1,23d' energy.xvg | awk '{print $2}' > energy.dat &
+  sed '1,23d' energy.xvg | awk '{print $1}' > timestep-$i.dat 
+  cd ../
+done
+
+# Control to wait for all the remaining executions to take place before the next step
+wait;
+
+# Now a set of files will be created with two columns: first the potential energy and the second will be the number of native contacts. The columns must be space delimited to be used in the program WHAM.jar, distributed with the SMOG2 package. 
+# This sequence will generate the file "e-Q.dat" for all run temperatures.
+
+for j in `ls -d */`; 
+do 
+  echo $j; 
+  i=${j::-1};
+  echo $i;
+  cd $i;
+  paste -d " " energy.dat contacts-AA-$i.dat > e-Q.dat;
+  sleep 1;
+  cd ..; 
+done
+
+# To run the WHAM.jar program, one must define a configuration file. Here goes an example in the file "config_wham.txt". The file "out-WHAM-1st-run.dat" has the output of a sucessful WHAM run.
+# A command example in Linux could be:
+java -jar $SMOG_FOLDER/smog2/src/tools/WHAM.jar --config config_wham.txt &>> out-WHAM-1st-run.dat
+
+# NOTE: $SMOG_FOLDER is the parent folder where your smog2 folder is placed. Please make sure to change this accordingly. 
+# The WHAM.jar output files have the unbiased free energies for the selected temperatures (in the config_wham.txt file). Note also that the config_wham.txt file settings should reflect the values found in the e-Q.dat files. For example, the bin size and number of bins shall be chosen to cover the sampled range of each variable (energy and number of contacts). 
+# To more details, check the SMOG2 manual.
+
+################################################################################
+# From all data gathered, the temperature of 119.5 was selected for enhanced sampling. The goal is to generate a trajectory more suitable to evaluate the coordinate-dependent diffusion coefficient. 
+
+temperatures="119.5"
+steps="1000000000"
+
+# The file example-3.mdp defines a shorter step sampling. Now every 50 steps will be recorded. 
+
+for i in $temperatures;
+do
+  mkdir $i;
+  cd $i/
+  sed 's/TEMP/'"$i"'/g;s/TSTEPS/'"$steps"'/g' ../example-3.mdp > reference.mdp
+  cd ../
+done
+
+
+# The TPR file for each temperature is created here using the MDP, GRO, and force field files.
+
+for i in $temperatures;
+do
+  cd $i/;
+  $cmdgmx grompp -f reference.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-$i-ci2.tpr &>> ../out-all-grompp-AA.dat;
+  cd ..;
+done
+
+# Running the simulation for each temperature at a time.
+
+for i in $temperatures;
+do
+  cd $i/;
+  sleep 1
+  echo "Running the simulation"
+  $cmdgmx mdrun -v -deffnm t-$i-ci2 -noddcheck -ntomp $nompt;
+  cd ..;
+done
+
+# Extracting the number of native contacts for each frame.
+
+for i in $temperatures;
+do
+  cd $i/;
+  time python3 ../../contacts_chunk.py AA ../ci2-AA-box.gro t-$i-ci2.xtc ../file.cont contacts-AA-$i.dat &>> ../out-contacts-AA.dat & 
+  cd ..;
+done
+
+# This sequence will extract the potential energy for each frame. 
+
+for i in $temperatures;
+do
+  cd $i;
+  echo 9 | $cmdgmx energy -f t-$i-ci2.edr -s t-$i-ci2.tpr;
+  sed '1,23d' energy.xvg | awk '{print $2}' > energy.dat &
+  sed '1,23d' energy.xvg | awk '{print $1}' > timestep-$i.dat 
+  cd ../
+done
+
+# Control to wait for all the remaining executions to take place before the next step
+wait;
+
+
+
