@@ -1,0 +1,2163 @@
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-80-ci2.tpr
+
+Setting the LD random seed to 141463222
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 2207347748
+Velocities were taken from a Maxwell distribution at 80 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#224: "Player Sleeps With the Fishes" (Ein Bekanntes Spiel Von ID Software)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 80 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 246 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-90-ci2.tpr
+
+Setting the LD random seed to 2818140055
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 3439313215
+Velocities were taken from a Maxwell distribution at 90 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#361: "Science Won't Change You" (The Talking Heads)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 90 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 246 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-100-ci2.tpr
+
+Setting the LD random seed to 718766346
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 926533224
+Velocities were taken from a Maxwell distribution at 100 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#474: "The last good thing written in C was Franz Schubert's Symphony Number 9." (Erwin Dieterich)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 100 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 246 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-110-ci2.tpr
+
+Setting the LD random seed to 395967268
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 4110695726
+Velocities were taken from a Maxwell distribution at 110 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#161: "When It Starts to Start It'll Never Stop" (Magnapop)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 110 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 246 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-120-ci2.tpr
+
+Setting the LD random seed to 3775162965
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 3622267699
+Velocities were taken from a Maxwell distribution at 120 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#269: "I Used To Care, But Things Have Changed" (Bob Dylan)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 120 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 246 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-130-ci2.tpr
+
+Setting the LD random seed to 1335158116
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 1310583626
+Velocities were taken from a Maxwell distribution at 130 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#527: "We'll celebrate a woman for anything, as long as it's not her talent." (Colleen McCullough)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 130 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 246 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-140-ci2.tpr
+
+Setting the LD random seed to 2640629824
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 3686188431
+Velocities were taken from a Maxwell distribution at 140 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#249: "Disturb the Peace of a John Q Citizen" (Urban Dance Squad)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 140 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 246 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-150-ci2.tpr
+
+Setting the LD random seed to 578397749
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 2668809872
+Velocities were taken from a Maxwell distribution at 150 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#81: "All Beauty Must Die" (Nick Cave)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 150 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 246 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-118-ci2.tpr
+
+Setting the LD random seed to 301921114
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 182611419
+Velocities were taken from a Maxwell distribution at 118 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 24637 Mb of data
+
+
+There was 1 note
+
+gcq#513: "You're like them scientists on TV explaining black holes. More you talk, less I get" (Jess Walter)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 118 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-119-ci2.tpr
+
+Setting the LD random seed to 3243279464
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 931369463
+Velocities were taken from a Maxwell distribution at 119 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 24637 Mb of data
+
+
+There was 1 note
+
+gcq#36: "They Were So Quiet About It" (Pixies)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 119 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-120.1-ci2.tpr
+
+Setting the LD random seed to 956197877
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 591496462
+Velocities were taken from a Maxwell distribution at 120.1 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 24637 Mb of data
+
+
+There was 1 note
+
+gcq#565: "Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to build bigger and better idiots. So far, the universe is winning." (Rick Cook)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 120.1 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-121-ci2.tpr
+
+Setting the LD random seed to 2846016646
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 3811602353
+Velocities were taken from a Maxwell distribution at 121 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 24637 Mb of data
+
+
+There was 1 note
+
+gcq#254: "In the End Science Comes Down to Praying" (P. v.d. Berg)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 121 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-122-ci2.tpr
+
+Setting the LD random seed to 4017192493
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 3786462862
+Velocities were taken from a Maxwell distribution at 122 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 24637 Mb of data
+
+
+There was 1 note
+
+gcq#566: "There's a limit to how many times you can read how great you are and what an inspiration you are, but I'm not there yet." (Randy Pausch)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 122 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-123-ci2.tpr
+
+Setting the LD random seed to 1200320338
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 1810177839
+Velocities were taken from a Maxwell distribution at 123 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 24637 Mb of data
+
+
+There was 1 note
+
+gcq#306: "Move about like a Scientist, lay down, get kissed" (Red Hot Chili Peppars)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 123 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-119-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.1#
+Setting the LD random seed to 3638342164
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 783777130
+Velocities were taken from a Maxwell distribution at 119 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 2464 Mb of data
+
+
+There was 1 note
+
+gcq#423: "A computer without COBOL and FORTRAN is like a piece of chocolate cake without ketchup or mustard." (Unix fortune program)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 119 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-120.1-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.1#
+Setting the LD random seed to 339286898
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 2120934001
+Velocities were taken from a Maxwell distribution at 120.1 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 2464 Mb of data
+
+
+There was 1 note
+
+gcq#34: "There's No Room For the Weak" (Joy Division)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 120.1 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-121-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.1#
+Setting the LD random seed to 3871172752
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 3787721495
+Velocities were taken from a Maxwell distribution at 121 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 2464 Mb of data
+
+
+There was 1 note
+
+gcq#159: "Confirmed" (Star Trek)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 121 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-122-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.1#
+Setting the LD random seed to 3767190919
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 1753480259
+Velocities were taken from a Maxwell distribution at 122 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 2464 Mb of data
+
+
+There was 1 note
+
+gcq#421: "The determined Real Programmer can write FORTRAN programs in any language." (Ed Post)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 122 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-123-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.1#
+Setting the LD random seed to 2302041700
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 2808275485
+Velocities were taken from a Maxwell distribution at 123 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 2464 Mb of data
+
+
+There was 1 note
+
+gcq#219: "Let's Go Hang Out In a Mall" (LIVE)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 123 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+bash: grompp: command not found
+bash: grompp: command not found
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-124-ci2.tpr
+
+Setting the LD random seed to 4284141398
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 1647041577
+Velocities were taken from a Maxwell distribution at 124 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 2464 Mb of data
+
+
+There was 1 note
+
+gcq#380: "The future always gets twisted and turned" (Lisa o Piu)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 124 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-124-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.1#
+Setting the LD random seed to 371168017
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 1235610651
+Velocities were taken from a Maxwell distribution at 124 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 2464 Mb of data
+
+
+There was 1 note
+
+Back Off! I just backed up t-124-ci2.tpr to ./#t-124-ci2.tpr.1#
+
+gcq#533: "I spent a lot of money on booze, birds and fast cars. The rest I just squandered." (George Best)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 124 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-119-ci2.tpr
+
+Setting the LD random seed to 989873730
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 904562785
+Velocities were taken from a Maxwell distribution at 119 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+gcq#179: "That Was Cool" (Beavis and Butthead)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 119 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-120.1-ci2.tpr
+
+Setting the LD random seed to 659510332
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 1997632830
+Velocities were taken from a Maxwell distribution at 120.1 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+gcq#193: "Don't Eat That Yellow Snow" (F. Zappa)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 120.1 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-121-ci2.tpr
+
+Setting the LD random seed to 1453808760
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 4189916052
+Velocities were taken from a Maxwell distribution at 121 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+gcq#95: "The Universe is Somewhere In Here" (J.G.E.M. Fraaije)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 121 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-122-ci2.tpr
+
+Setting the LD random seed to 1475056097
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 3959246795
+Velocities were taken from a Maxwell distribution at 122 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+gcq#229: "She Needs Cash to Buy Aspirine For Her Pain" (LIVE)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 122 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-123-ci2.tpr
+
+Setting the LD random seed to 1702294685
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 329962576
+Velocities were taken from a Maxwell distribution at 123 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+gcq#400: "You got one part of that wrong. This is not meth." (Breaking Bad)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 123 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-124-ci2.tpr
+
+Setting the LD random seed to 3230656629
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 1010702417
+Velocities were taken from a Maxwell distribution at 124 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+gcq#430: "In science it often happens that scientists say, 'You know that's a really good argument; my position is mistaken,' and then they would actually change their minds and you never hear that old view from them again. They really do it. It doesn't happen as often as it should, because scientists are human and change is sometimes painful. But it happens every day. I cannot recall the last time something like that happened in politics or religion." (Carl Sagan)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 124 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-121-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.1#
+Setting the LD random seed to 1953470107
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 2812273857
+Velocities were taken from a Maxwell distribution at 121 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+Back Off! I just backed up t-121-ci2.tpr to ./#t-121-ci2.tpr.1#
+
+gcq#210: "Oh My God ! It's the Funky Shit" (Beastie Boys)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 121 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-122-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.1#
+Setting the LD random seed to 1614721647
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 2142894438
+Velocities were taken from a Maxwell distribution at 122 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+Back Off! I just backed up t-122-ci2.tpr to ./#t-122-ci2.tpr.1#
+
+gcq#575: "Sir, spare your threats: The bug which you would fright me with I seek." (Hermione, Act III, scene II of Shakespeare's Winter's Tale)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 122 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-123-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.1#
+Setting the LD random seed to 3647531684
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 3128476365
+Velocities were taken from a Maxwell distribution at 123 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+Back Off! I just backed up t-123-ci2.tpr to ./#t-123-ci2.tpr.1#
+
+gcq#533: "I spent a lot of money on booze, birds and fast cars. The rest I just squandered." (George Best)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 123 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-124-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.1#
+Setting the LD random seed to 771010015
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 4125396471
+Velocities were taken from a Maxwell distribution at 124 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+Back Off! I just backed up t-124-ci2.tpr to ./#t-124-ci2.tpr.1#
+
+gcq#80: "Don't Follow Me Home" (Throwing Muses)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 124 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-123-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.2#
+Setting the LD random seed to 3758957866
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 322215185
+Velocities were taken from a Maxwell distribution at 123 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+Back Off! I just backed up t-123-ci2.tpr to ./#t-123-ci2.tpr.2#
+
+gcq#127: "Everybody Wants to Be Naked and Famous" (Tricky)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 123 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-124-ci2.tpr
+
+
+Back Off! I just backed up mdout.mdp to ./#mdout.mdp.2#
+Setting the LD random seed to 1983571651
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 2393799711
+Velocities were taken from a Maxwell distribution at 124 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 1 [file arquivo.mdp]:
+  This run will generate roughly 6356 Mb of data
+
+
+There was 1 note
+
+Back Off! I just backed up t-124-ci2.tpr to ./#t-124-ci2.tpr.2#
+
+gcq#234: "If I Wanted You to Understand This, I Would Explain it Better" (J. Cruijff)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 124 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-119.1-ci2.tpr
+
+Setting the LD random seed to 3190264853
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 3669374131
+Velocities were taken from a Maxwell distribution at 119.1 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#483: "Chance favors the prepared mind." (Louis Pasteur)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 119.1 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 1271 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-119.2-ci2.tpr
+
+Setting the LD random seed to 541516908
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 4084727085
+Velocities were taken from a Maxwell distribution at 119.2 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#401: "It's easy to remember: a half a kT is equal to five fourths of a kJ/mol." (Anders Gabrielsson)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 119.2 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 1271 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-119.4-ci2.tpr
+
+Setting the LD random seed to 1233737645
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 3190927959
+Velocities were taken from a Maxwell distribution at 119.4 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#540: "Science is the great antidote to the poison of enthusiasm and superstition." (Adam Smith, Wealth of Nations, 1776)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 119.4 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 1271 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-119.6-ci2.tpr
+
+Setting the LD random seed to 732293503
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 786476616
+Velocities were taken from a Maxwell distribution at 119.6 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#246: "Everything Must Go" (Red Hot Chili Peppers)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 119.6 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 1271 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-119.8-ci2.tpr
+
+Setting the LD random seed to 2230384734
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 1697028521
+Velocities were taken from a Maxwell distribution at 119.8 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+gcq#49: "I'll Master Your Language, and In the Meantime I'll Create My Own" (Tricky)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 119.8 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 1271 Mb of data
+                  :-) GROMACS - gmx grompp, VERSION 5.1.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, VERSION 5.1.4
+Executable:   /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4/bin/gmx
+Data prefix:  /home/frederico.freitas/BIN/nd/gmx-5.1.4_NOMPI_gcc6.4.0_E5-2680v4
+Command line:
+  gmx grompp -f arquivo.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-119.5-ci2.tpr
+
+
+NOTE 1 [file arquivo.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Setting the LD random seed to 1582728423
+Generated 1 of the 1 non-bonded parameter combinations
+Excluding 3 bonded neighbours molecule type 'Macromolecule'
+Setting gen_seed to 1959962189
+Velocities were taken from a Maxwell distribution at 119.5 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group System is 1560.00
+
+NOTE 2 [file arquivo.mdp]:
+  This run will generate roughly 127125 Mb of data
+
+
+There were 2 notes
+
+gcq#563: "Lottery: A tax on people who are bad at math." (Ambrose Bierce)
+
+Analysing residue names:
+There are:    64    Protein residues
+There are:     1      Other residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 119.5 K
+Calculated rlist for 1x1 atom pair-list as 1.200 nm, buffer size 0.000 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
