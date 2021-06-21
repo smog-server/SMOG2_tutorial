@@ -1,0 +1,5 @@
+The file e-Q.dat has to be divided to comply with GitHub storage policies
+To restore the file, please type:
+
+cat e-Q.part0001.dat >> e-Q.dat
+cat e-Q.part0002.dat >> e-Q.dat
