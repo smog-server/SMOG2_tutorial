@@ -1,3 +1,6 @@
 [submodule "contacts-python"]
 	path = contacts-python
 	url = https://github.com/fredcfreitas/contacts-python.git
+[submodule "DrDiff"]
+	path = DrDiff
+	url = https://github.com/ronaldolab/DrDiff.git
