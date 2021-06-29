@@ -1,4 +1,5 @@
 # To comply with GitHub storage policy, the trajectory file had to be divided. To get it, type:
 
 cat Q-119.5.part*dat >> Q-119.5.dat
+cat Q-119.7.part*dat >> Q-119.7.dat
 

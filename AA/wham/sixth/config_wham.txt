@@ -1,0 +1,66 @@
+kB 0.008314 # Boltzmann constant
+tolerance 0.0000001 # when convergence is reached
+overwriting # WHAM.jar is allowed to overwrite
+            # existing files
+threads 6   # increase to utilize multiple cores	
+
+##### define internal histograming #####
+numDimensions 2 # space delimited file, two columns: Potential_energy and Q
+# energy
+numBins 746 #300
+start -342.277863
+step 2 #5
+# Q
+numBins 199 #300
+start 0
+step 3 #2
+
+##### trajectory files (each with 2 columns: Potential_energy and Q)
+numFiles 22
+name ../../80/e-Q.dat temp 80 # temp specifies the temperature of this trajectory
+name ../../90/e-Q.dat temp 90
+name ../../100/e-Q.dat temp 100
+name ../../110/e-Q.dat temp 110
+name ../../119/e-Q.dat temp 119
+name ../../119.1/e-Q.dat temp 119.1
+name ../../119.2/e-Q.dat temp 119.2
+name ../../119.3/e-Q.dat temp 119.3
+name ../../119.4/e-Q.dat temp 119.4
+name ../../119.5/e-Q.dat temp 119.5
+name ../../119.6/e-Q.dat temp 119.6
+name ../../119.7/e-Q.dat temp 119.7
+name ../../119.8/e-Q.dat temp 119.8
+name ../../120/e-Q.dat temp 120
+name ../../120.1/e-Q.dat temp 120.1
+name ../../121/e-Q.dat temp 121 
+name ../../122/e-Q.dat temp 122
+name ../../123/e-Q.dat temp 123
+name ../../124/e-Q.dat temp 124
+name ../../130/e-Q.dat temp 130
+name ../../140/e-Q.dat temp 140
+name ../../150/e-Q.dat temp 150
+
+
+run_wham # tells the program to compute density of states
+dosFile dos.dat # filename for density of states output
+
+run_cv # tells the program to compute specific head from dos
+### run_cv parameters
+startT 80 # start temp
+deltaT 0.1 # print every 0.1 degree
+ntemps 700 # for a total of 700 prints
+run_cv_out cv.dat # name of cv outputfile
+# the output will be temperature Cv enthalpy free_energy entropy
+
+run_free #tells the program to compute a free energy
+startTF 80 # start temp
+deltaTF 0.1 # print every 0.1 degree
+ntempsF 700 # for a total of 700 prints
+run_free_out free/  # filename is ${run_free_out}${temp}
+#NOTE any output file can have directory structure
+
+run_coord #tells the program to compute coordinate averages
+startTC 80 # start temp
+deltaTC 0.2 # print every 0.2 degree
+ntempsC 350 # for a total of 350 prints
+run_coord_out coord.dat  # filename
