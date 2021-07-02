@@ -774,3 +774,162 @@ java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt
 cd ../../
 
 
+temperatures="118.3 118.7"
+steps="10000000000"
+
+# The file example-3.mdp defines a shorter step sampling. Now every 50 steps will be recorded. 
+
+for i in $temperatures;
+do
+  mkdir $i;
+  cd $i/
+  sed 's/TEMP/'"$i"'/g;s/TSTEPS/'"$steps"'/g' ../example-3.mdp > reference.mdp
+  cd ../
+done
+
+
+# The TPR file for each temperature is created here using the MDP, GRO, and force field files.
+
+for i in $temperatures;
+do
+  cd $i/;
+  $cmdgmx grompp -f reference.mdp -c ../ci2-AA-box.gro -p ../ci2-AA.top -o t-$i-ci2.tpr &>> ../out-all-grompp-AA.dat;
+  cd ..;
+done
+
+# Running the simulation for each temperature at a time.
+
+
+for i in $temperatures;
+do
+  cd $i/;
+  sleep 1
+  echo "Running the simulation"
+  $cmdgmx mdrun -v -deffnm t-$i-ci2 -noddcheck -noappend -nsteps -1 -ntomp $nompt;
+  cd ..;
+done
+
+# Obs.: Due to a time-limit, the simulation was not carried out until all requested steps were simulated, what is common specially while using a computer cluster.
+
+
+# Obs.: Due to a time-limit, the simulation was not carried out until all requested steps were simulated, what is common specially while using a computer cluster.
+
+
+# To simulate the next three parts for 24hours each (for example), one may use:
+for a in `seq 1 14`;
+do
+  $cmdgmx mdrun -cpi t-$temperatures-ci2.cpt -v -deffnm t-$i-ci2 -noddcheck -ntomp 28 -noappend -nsteps -1 -maxh 6
+done
+
+
+# Extracting the number of native contacts for each frame for each part.
+for i in $temperatures;
+do
+  # To get the number of trajectory files available:
+  nfiles=$( ls -l $i/t-*xtc | wc -l | awk '{print $1}' )
+  cd $i/;
+  for j in `seq 1 $nfiles`;
+  do
+    k=$( printf "%04d" $(( j )) )
+    time python3 ../../contacts_chunk.py AA ../ci2-AA-box.gro t-$i-ci2.part"$k".xtc ../file.cont contacts-AA-$i.part"$k".dat &>> ../out-contacts-AA.dat & 
+  done
+  cd ..;
+done
+
+
+# This sequence will extract the potential energy for each frame and each part. 
+for i in $temperatures;
+do
+  cd $i/;
+  for j in *edr;
+  do 
+    echo 9 | $cmdgmx energy -f $j -s t-$i-ci2.tpr -o ${j::-4}.xvg &
+    sleep 1;
+  done
+
+  wait;
+
+  for j in *edr;
+  do 
+    sed '1,23d' ${j::-4}.xvg > time-${j::-4}.dat ;
+    sleep 1;
+  done
+  cd ../
+done
+wait; 
+
+# Now one have to compile all the parts results. Firstly, putting together the data (timestep, potential energy and contacts) of all files discarding the overlapping frames based on the timestep. For that, one can use the following routines.
+
+
+re='^[0-9]+([.][0-9]+)?$'
+for temp in $temperatures;
+do
+  # To get the number of trajectory files available:
+  nfiles=$( ls -l $temp/t-*xtc | wc -l | awk '{print $1}' )
+  cd $temp;
+  for i in `seq 1 $nfiles`;
+  do 
+    k=$( printf "%04d" $(( i )) )
+    nlines=$( wc -l contacts-AA-"$temp".part"$k".dat | awk '{print $1}')
+    echo "Analyzing part $k which has $nlines lines."
+    head -n $nlines time-t-"$temp"-ci2.part"$k".dat > temporary-"$k".dat
+    sed -i -e 's/\s\+/ /g;s/^ \+//g' temporary-"$k".dat
+    paste -d " " temporary-"$k".dat contacts-AA-"$temp".part"$k".dat >> time-e-Q-"$k".dat;  
+    sed -i -e 's/\s\+/ /g;s/^ \+//g' time-e-Q-"$k".dat
+  done
+  wait;
+  for i in `seq 1 $nfiles`;
+  do 
+    k=$( printf "%04d" $(( i )) )
+    j=$( printf "%04d" $(( i+1 )) )
+    nfirst=$( head -n 1 time-e-Q-"$j".dat | awk '{print $1}' )
+    if [[ $nfirst =~ $re ]] ; 
+    then
+      echo "Currently on part $k and part $j was found. Doing the math."
+      awk -v limit="$nfirst" '$1<limit' time-e-Q-"$k".dat > limited-"$k".dat
+      cat limited-"$k".dat >> time-e-Q.dat
+    else
+      echo "Last part."
+      cat time-e-Q-"$k".dat >> time-e-Q.dat
+    fi
+  done
+  rm temporary-* limited-* time-e-Q-*
+  cd ../
+done
+
+# Obs.: The simulation files were redivided in the last two temperatures to compy with GitHub storage limits.
+
+# Now compiling the results and splitting the files
+for i in $temperatures;
+do
+  cd $i;
+  awk '{print $2, $3}' time-e-Q.dat > e-Q-total.dat 
+  cd ..;
+done
+
+# To run WHAM and keep the same sampling, one should made e-Q.dat using each 10 saved frames to keep the save frequency used in the other temperatures.
+
+for i in $temperatures;
+do
+  cd $i;
+  stride=10
+  head -n 1 e-Q-total.dat > e-Q.dat
+  sed '1d' e-Q-total.dat > core.dat
+  awk -v patt="$stride" 'NR % patt == 0' core.dat >> e-Q.dat
+  rm core.dat
+  cd ..;
+done
+
+# Analyzing the current sampling on the temperature 119.7, from the free energy profile and the trajectory histogram it is clear that the unfolded state is more frequent, so the folding temperature should be smaller. 
+
+# To check an eventual change on the WHAM results, one may run:
+# Note that some features were changed in the configuration file. 
+# To run WHAM, one may go to the folder:
+
+cd wham/seventh;
+
+# And execute it:
+java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt 
+
+cd ../../
+

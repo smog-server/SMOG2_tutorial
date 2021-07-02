@@ -1,0 +1,16 @@
+mfpt_AB from Kramers equation,"(4023.796105449714, 19577.33962198808)"
+mfpt_BA from Kramers equation,"(52161.115249942035, 250121.66458701473)"
+mfpt_AB from trajectory,35448.98
+std_AB from trajectory,21325.812320228273
+number of transitions_AB,5
+mfpt_BA from trajectory,347568.14
+std_BA from trajectory,212534.52147986312
+number of transitions_BA,5
+average mfpt,191508.56
+total number of transitions,10
+mtpt_AB from trajectory,300.0
+std_mtpt_AB from trajectory,105.69751179663598
+mtpt_BA from trajectory,287.74
+std_mtpt_BA from trajectory,144.8132535370986
+mtpt_AB from Szabo equation,"(43.81620536307422, 51.88872118675004)"
+mtpt_BA from Szabo equation,"(43.75330107109543, 46.26962238399013)"

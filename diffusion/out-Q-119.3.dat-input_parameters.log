@@ -1,0 +1,10 @@
+# [beta, EquilibrationSteps, Q_zero, Q_one, nbins, time_step, Snapshot, tmin, tmax]
+1.000000
+200.000000
+35.000000
+450.000000
+76.000000
+0.002000
+50.000000
+2.000000
+6.000000

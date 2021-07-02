@@ -2,4 +2,6 @@
 
 cat Q-119.5.part*dat >> Q-119.5.dat
 cat Q-119.7.part*dat >> Q-119.7.dat
+cat Q-118.7.part*dat >> Q-118.7.dat
+cat Q-118.3.part*dat >> Q-118.3.dat
 
