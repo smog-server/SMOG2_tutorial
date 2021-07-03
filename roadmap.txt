@@ -2,17 +2,17 @@
 
 # First we have to set some environmental variables
 
-# For example: which command is used to call gromacs? If you are using an installation without MPI support, use "gmx". If you have MPI support, use "gmx_mpi", for example. In this case, it will be:
+# For example: which command is used to call GROMACS? If you are using an installation without MPI support, you might use "gmx". If you have MPI support, you might use "gmx_mpi", for example. Check your installation. In this case, it will be:
 
 cmdgmx="gmx"
 
-# Now, we have to set the number of OpenMP threads to be used. We are assuming simulations using one node/computer. If you are using a PC, the better option here is the default (0). In this case, it will use the number set by the environment variable OMP_NUM_THREADS, common in some clusters.
+# Now, we have to set the number of OpenMP threads to be used. We are assuming simulations using just one node/computer. If you are using a PC, the better option here is the default (0). In this case, it will use the number set by the environment variable OMP_NUM_THREADS, common in some clusters.
 
 nompt=$OMP_NUM_THREADS
 
 # The downloaded PDB file is called 2ci2.pdb. The file ci2-clean.pdb is derived from the original, with just the lines beginning with ATOM, TER, and END remaining. The other lines were deleted. The HETATM entries in this PDB are just some water molecules that will not be used in our simulations and were also deleted.
 
-# In this step the cleaned PDB file will be adjusted. The smog_adjustPDB function, in its standard options, will change the residue names accordingly to the atom sequence, if any other map is provided. Other changes in the format will be made in order to make the output file more suitable to generate the force field. If needed, the atoms will be renumbered or TER lines will be added. None was needed in this case. The output is in the file "out-smog_adjustPDB.dat".
+# In this step the cleaned PDB file will be adjusted. The smog_adjustPDB function, in its standard options, will change the residue names accordingly to the atom sequence, if any other map is provided. Other changes in the format will be made in order to make the output file more suitable to generate the force field. If needed, the atoms will be renumbered or TER lines will be added if a gap will be found. None was needed in this case. The output is in the file "out-smog_adjustPDB.dat".
 
 smog_adjustPDB -i ci2-clean.pdb -o ci2-adjusted.pdb > out-smog_adjustPBD.dat
 
@@ -20,21 +20,19 @@ smog_adjustPDB -i ci2-clean.pdb -o ci2-adjusted.pdb > out-smog_adjustPBD.dat
 
 smog2 -i ci2-adjusted.pdb -dname ci2-AA -AA &>> out-smog2-AA.dat
 
-
 # Creating the folder to run the simulations and put all the force field files in it.
 
 mkdir AA
 mv ci2-AA* AA/
 cd AA/
 
-# From the ci2-AA.top file, extract the "[ pairs ]" section, and create the file.cont file. This file will be used as a reference to count the native contacts.
-
+# From the ci2-AA.top file, extract the "[ pairs ]" section and create the file.cont file. This file will be used as a reference to count the native contacts.
 
 # Creating an initial file with the selected molecule (the "atom" beads, in this case), and enlarging the simulation box (to avoid hitting the boundaries during the simulations. 
 
 $cmdgmx editconf -f ci2-AA.gro -c -d 10 -o ci2-AA-box.gro -bt cubic &>> out-editconf-AA.dat
 
-# The file example.mdp is an example MDP file (MDP: Molecular Dynamics Parameters file) used in SMOG simulations. This file was created using the example found in the SMOG2 package and changing the number of simulated steps to TSTEPS and the temperature to TEMP. This will be used ahead.
+# The file example.mdp is an example MDP file (MDP: Molecular Dynamics Parameters file) for SMOG simulations used in GROMACS. This file was created using the example found in the SMOG2 package and changing the number of simulated steps to TSTEPS and the temperature to TEMP. This will be used ahead.
 
 # Here the folders and the MDP files for each temperature are created 
 
@@ -60,7 +58,7 @@ do
   cd ..;
 done
 
-# Running the simulation for each temperature at a time. Note that this command will work with a non-MPI compiled GROMACS. Some additions/changes have to be made when using MPI compiled versions.
+# Simulating each temperature at a time. Note that this command will work with non-MPI compiled GROMACS. Some additions/changes have to be made when using MPI compiled versions.
 
 for i in $temperatures;
 do
@@ -71,12 +69,12 @@ do
   cd ..;
 done
 
-# The file out-mdrun-AA.dat shows a header that should appear while running the simulation. This will change depending on your computer, gromacs version and/or installation. In this case, just the output for the first temperature is shown for simplicity. The others are analogs.
+# The file out-mdrun-AA.dat shows a header that should appear while running the simulation. That may change depending on your computer, gromacs version and/or installation. In this case, just the output for the first temperature is shown for simplicity. The others are analogs.
 
 ################################################################################
 # The analysis part will begin here. The next sequence is made to extract the total number of native contacts formed for each frame. 
 # NOTE: make sure you have python3 and all needed packages installed and loaded.
-# To make this sure, please consider installing the packages in the "requirements.txt" file.
+# To be sure, please consider installing the packages in the "requirements.txt" file.
 
 for i in $temperatures;
 do
@@ -112,28 +110,26 @@ do
   cd ..; 
 done
 
-
 # To run WHAM, one may go to the folder:
 
+mkdir -p wham/first
 cd wham/first;
 
 # To run the WHAM.jar program, one must define a configuration file. Here goes an example in the file "config_wham.txt".
 # And execute it:
-java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt 
+java -jar $SMOG_FOLDER/src/tools/WHAM.jar --config config_wham.txt
+cd ../../
 
 # NOTE: $SMOG_FOLDER is the parent folder where your smog2 folder is placed. Please make sure to change this accordingly. 
 # The WHAM.jar output files have the unbiased free energies for the selected temperatures (in the config_wham.txt file). Note also that the config_wham.txt file settings should reflect the values found in the e-Q.dat files. For example, the bin size and number of bins shall be chosen to cover the sampled range of each variable (energy and number of contacts). 
 # To more details, check the SMOG2 manual at http://smog-server.org
 
-
 # Checking the specific heat from the WHAM run, as the peak is around 122 and the free energies have not shown a smooth profile, the sampling around 122 may be improved.
-
-cd ../../ 
 
 temperatures="119 120.1 121 122 123 124"
 steps="500000000"
 
-# The file "example-2.mdp" will be used with a higher number of steps to be simulated. Unfortunately, due to time issues, some temperatures did not run until the end.
+# The file "example-2.mdp" will be used with a larger number of steps to be simulated. Unfortunately, due to time issues, some temperatures did not run until the end.
 
 for i in $temperatures;
 do
@@ -152,7 +148,7 @@ do
   cd ..;
 done
 
-# Running the simulation for each temperature at a time.
+# Simulating each temperature at a time.
 
 for i in $temperatures;
 do
@@ -186,7 +182,6 @@ done
 # Control to wait for all the remaining executions to take place before the next step
 wait;
 
-
 # Now a set of files will be created with two columns: first the potential energy and the second will be the number of native contacts. The columns must be space delimited to be used in the program WHAM.jar, distributed with the SMOG2 package. 
 # This sequence will generate the file "e-Q.dat" for all run temperatures.
 
@@ -201,21 +196,18 @@ do
   cd ..; 
 done
 
-
 # To run WHAM, one may go to the folder:
 
+mkdir -p wham/second
 cd wham/second;
 
 # And execute it:
-java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt 
-
+java -jar $SMOG_FOLDER/src/tools/WHAM.jar --config config_wham.txt
+cd ../../
 
 # Checking the specific heat from the WHAM run, as the peak is around 122 and the free energies have not shown a smooth profile, the sampling around 122 may be improved.
 
-cd ../../
-
 # Now, both specific heat peak and free-energy profiles show the folding temperature should be close to T=119.[4-8]. So, the next range of simulated temperatures should be in this interval.
-
 
 temperatures="119.1 119.2  119.4 119.6 119.8"
 steps="100000000"
@@ -239,7 +231,7 @@ do
   cd ..;
 done
 
-# Running the simulation for each temperature at a time.
+# Simulating each temperature at a time.
 
 for i in $temperatures;
 do
@@ -287,18 +279,16 @@ do
   cd ..; 
 done
 
-
 # To run WHAM, one may go to the folder:
 
+mkdir -p wham/third
 cd wham/third;
 
 # And execute it:
-java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt 
-
+java -jar $SMOG_FOLDER/src/tools/WHAM.jar --config config_wham.txt
 cd ../../
 
-
-# From the results, was decided to enhance the sampling to make the trajectories better suitable to run DrDiff framework. 
+# From the results was decided to enhance the sampling to make the trajectories better suitable to run the DrDiff framework. 
 
 temperatures="119.7"
 steps="10000000000"
@@ -313,7 +303,6 @@ do
   cd ../
 done
 
-
 # The TPR file for each temperature is created here using the MDP, GRO, and force field files.
 
 for i in $temperatures;
@@ -323,7 +312,7 @@ do
   cd ..;
 done
 
-# Running the simulation for each temperature at a time.
+# Simulating each temperature at a time.
 
 for i in $temperatures;
 do
@@ -334,8 +323,7 @@ do
   cd ..;
 done
 
-# Obs.: Due to a time-limit, the simulation was not carried out until all requested steps were simulated, what is common specially while using a computer cluster.
-
+# Obs.: Due to a time limit, the simulation was not carried out until all requested steps were simulated, which is common especially while using a computer cluster.
 
 # To simulate the next three parts for 24hours each (for example), one may use:
 for a in `seq 1 3`;
@@ -345,7 +333,6 @@ done
 
 # To get the number of trajectory files available:
 nfiles=$( ls -l $temperatures/t-*xtc | wc -l | awk '{print $1}' )
-
 
 # Extracting the number of native contacts for each frame for each part.
 for i in $temperatures;
@@ -358,7 +345,6 @@ do
   done
   cd ..;
 done
-
 
 # This sequence will extract the potential energy for each frame and each part. 
 for i in $temperatures;
@@ -381,8 +367,7 @@ do
 done
 wait; 
 
-# Now one have to compile all the parts results. Firstly, putting together the data (timestep, potential energy and contacts) of all files discarding the overlapping frames based on the timestep. For that, one can use the following routines.
-
+# Now one has to compile all the parts results. Firstly, putting together the data (timestep, potential energy, and contacts) of all files discarding the overlapping frames based on the timestep. For that, one can use the following routines.
 
 re='^[0-9]+([.][0-9]+)?$'
 for temp in $temperatures;
@@ -426,7 +411,7 @@ do
   cd ..;
 done
 
-# To run WHAM and keep the same sampling, one should made e-Q.dat using each 10 saved frames to keep the save frequency used in the other temperatures.
+# To run WHAM and keep the same sampling, one should make e-Q.dat using each 10 saved frames to keep the saving frequency used in the other temperatures.
 
 for i in $temperatures;
 do
@@ -441,20 +426,16 @@ done
 
 # Analyzing the current sampling on the temperature 119.7, from the free energy profile and the trajectory histogram it is clear that the unfolded state is more frequent, so the folding temperature should be smaller. 
 
-# To check an eventual change on the WHAM results, one may run:
-
 # To run WHAM, one may go to the folder:
 
+mkdir wham/fourth
 cd wham/fourth;
 
 # And execute it:
-java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt 
-
+java -jar $SMOG_FOLDER/src/tools/WHAM.jar --config config_wham.txt
 cd ../../
 
-
 # The next temperature to be investigated: 119.5
-
 
 temperatures="119.5"
 steps="10000000000"
@@ -469,7 +450,6 @@ do
   cd ../
 done
 
-
 # The TPR file for each temperature is created here using the MDP, GRO, and force field files.
 
 for i in $temperatures;
@@ -479,7 +459,7 @@ do
   cd ..;
 done
 
-# Running the simulation for each temperature at a time.
+# Simulating each temperature at a time.
 
 for i in $temperatures;
 do
@@ -490,10 +470,9 @@ do
   cd ..;
 done
 
-# Obs.: Due to a time-limit, the simulation was not carried out until all requested steps were simulated, what is common specially while using a computer cluster.
+# Obs.: Due to a time limit, the simulation was not carried out until all requested steps were simulated, which is common especially while using a computer cluster.
 
-
-# To simulate the next three parts for 24hours each (for example), one may use:
+# To simulate the next twenty-four parts for 6 hours each (for example), one may use:
 for a in `seq 1 25`;
 do
   $cmdgmx mdrun -cpi t-$temperatures-ci2.cpt -v -deffnm t-$i-ci2 -noddcheck -ntomp 28 -noappend -nsteps -1 -maxh 6
@@ -501,7 +480,6 @@ done
 
 # To get the number of trajectory files available:
 nfiles=$( ls -l $temperatures/t-*xtc | wc -l | awk '{print $1}' )
-
 
 # Extracting the number of native contacts for each frame for each part.
 for i in $temperatures;
@@ -514,7 +492,6 @@ do
   done
   cd ..;
 done
-
 
 # This sequence will extract the potential energy for each frame and each part. 
 for i in $temperatures;
@@ -537,8 +514,7 @@ do
 done
 wait; 
 
-# Now one have to compile all the parts results. Firstly, putting together the data (timestep, potential energy and contacts) of all files discarding the overlapping frames based on the timestep. For that, one can use the following routines.
-
+# Now one has to compile all the parts results. Firstly, putting together the data (timestep, potential energy, and contacts) of all files discarding the overlapping frames based on the timestep. For that, one can use the following routines.
 
 re='^[0-9]+([.][0-9]+)?$'
 for temp in $temperatures;
@@ -574,7 +550,7 @@ do
   cd ../
 done
 
-# Obs.: The simulation files were redivided in the last two temperatures to compy with GitHub storage limits.
+# Obs.: The simulation files were redivided in the last two temperatures to comply with GitHub storage limits.
 
 # Now compiling the results and splitting the files
 for i in $temperatures;
@@ -584,7 +560,7 @@ do
   cd ..;
 done
 
-# To run WHAM and keep the same sampling, one should made e-Q.dat using each 10 saved frames to keep the save frequency used in the other temperatures.
+# To run WHAM and keep the same sampling, one should make e-Q.dat using each 10 saved frames to keep the saving frequency used in the other temperatures.
 
 for i in $temperatures;
 do
@@ -597,23 +573,21 @@ do
   cd ..;
 done
 
-# Analyzing the current sampling on the temperature 119.7, from the free energy profile and the trajectory histogram it is clear that the unfolded state is more frequent, so the folding temperature should be smaller. 
+# Analyzing the current sampling on the temperature 119.5, from the free energy profile and the trajectory histogram it seems the folding temperature is around 119.5. 
 
 # To check an eventual change on the WHAM results, one may run:
 # Note that some features were changed in the configuration file. 
 # To run WHAM, one may go to the folder:
 
+mkdir -p wham/fifth
 cd wham/fifth;
 
 # And execute it:
-java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt 
-
+java -jar $SMOG_FOLDER/src/tools/WHAM.jar --config config_wham.txt
 cd ../../
 
-
-
-# The next temperature to be investigated: 119.5
-
+# To investigate some temperatures below folding temperature:
+# The next temperature to be investigated: 119.3
 
 temperatures="119.3"
 steps="10000000000"
@@ -628,7 +602,6 @@ do
   cd ../
 done
 
-
 # The TPR file for each temperature is created here using the MDP, GRO, and force field files.
 
 for i in $temperatures;
@@ -638,8 +611,7 @@ do
   cd ..;
 done
 
-# Running the simulation for each temperature at a time.
-
+# Simulating each temperature at a time.
 
 for i in $temperatures;
 do
@@ -650,13 +622,12 @@ do
   cd ..;
 done
 
-# Obs.: Due to a time-limit, the simulation was not carried out until all requested steps were simulated, what is common specially while using a computer cluster.
+# Obs.: Due to a time limit, the simulation was not carried out until all requested steps were simulated, which is common especially while using a computer cluster.
+
+# Obs.: Due to a time limit, the simulation was not carried out until all requested steps were simulated, which is common especially while using a computer cluster.
 
 
-# Obs.: Due to a time-limit, the simulation was not carried out until all requested steps were simulated, what is common specially while using a computer cluster.
-
-
-# To simulate the next three parts for 24hours each (for example), one may use:
+# To simulate the next parts for 6 hours each (for example), one may use:
 for a in `seq 1 14`;
 do
   $cmdgmx mdrun -cpi t-$temperatures-ci2.cpt -v -deffnm t-$i-ci2 -noddcheck -ntomp 28 -noappend -nsteps -1 -maxh 6
@@ -664,7 +635,6 @@ done
 
 # To get the number of trajectory files available:
 nfiles=$( ls -l $temperatures/t-*xtc | wc -l | awk '{print $1}' )
-
 
 # Extracting the number of native contacts for each frame for each part.
 for i in $temperatures;
@@ -677,7 +647,6 @@ do
   done
   cd ..;
 done
-
 
 # This sequence will extract the potential energy for each frame and each part. 
 for i in $temperatures;
@@ -700,8 +669,7 @@ do
 done
 wait; 
 
-# Now one have to compile all the parts results. Firstly, putting together the data (timestep, potential energy and contacts) of all files discarding the overlapping frames based on the timestep. For that, one can use the following routines.
-
+# Now one has to compile all the parts results. Firstly, putting together the data (timestep, potential energy, and contacts) of all files discarding the overlapping frames based on the timestep. For that, one can use the following routines.
 
 re='^[0-9]+([.][0-9]+)?$'
 for temp in $temperatures;
@@ -737,7 +705,7 @@ do
   cd ../
 done
 
-# Obs.: The simulation files were redivided in the last two temperatures to compy with GitHub storage limits.
+# Obs.: The simulation files were redivided in the last two temperatures to comply with GitHub storage limits.
 
 # Now compiling the results and splitting the files
 for i in $temperatures;
@@ -747,7 +715,7 @@ do
   cd ..;
 done
 
-# To run WHAM and keep the same sampling, one should made e-Q.dat using each 10 saved frames to keep the save frequency used in the other temperatures.
+# To run WHAM and keep the same sampling, one should make e-Q.dat using each 10 saved frames to keep the saving frequency used in the other temperatures.
 
 for i in $temperatures;
 do
@@ -760,19 +728,18 @@ do
   cd ..;
 done
 
-# Analyzing the current sampling on the temperature 119.7, from the free energy profile and the trajectory histogram it is clear that the unfolded state is more frequent, so the folding temperature should be smaller. 
+# Analyzing the current sampling on the temperature 119.3, from the free energy profile and the trajectory histogram, it was decided to run the other two temperatures below the folding temperature.
 
 # To check an eventual change on the WHAM results, one may run:
 # Note that some features were changed in the configuration file. 
 # To run WHAM, one may go to the folder:
 
+mkdir -p wham/sixth
 cd wham/sixth;
 
 # And execute it:
-java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt 
-
+java -jar $SMOG_FOLDER/src/tools/WHAM.jar --config config_wham.txt
 cd ../../
-
 
 temperatures="118.3 118.7"
 steps="10000000000"
@@ -787,7 +754,6 @@ do
   cd ../
 done
 
-
 # The TPR file for each temperature is created here using the MDP, GRO, and force field files.
 
 for i in $temperatures;
@@ -797,8 +763,7 @@ do
   cd ..;
 done
 
-# Running the simulation for each temperature at a time.
-
+# Simulating each temperature at a time.
 
 for i in $temperatures;
 do
@@ -809,18 +774,13 @@ do
   cd ..;
 done
 
-# Obs.: Due to a time-limit, the simulation was not carried out until all requested steps were simulated, what is common specially while using a computer cluster.
+# Obs.: Due to a time limit, the simulation was not carried out until all requested steps were simulated, which is common especially while using a computer cluster.
 
-
-# Obs.: Due to a time-limit, the simulation was not carried out until all requested steps were simulated, what is common specially while using a computer cluster.
-
-
-# To simulate the next three parts for 24hours each (for example), one may use:
+# To simulate the next parts for 6 hours each (for example), one may use:
 for a in `seq 1 14`;
 do
   $cmdgmx mdrun -cpi t-$temperatures-ci2.cpt -v -deffnm t-$i-ci2 -noddcheck -ntomp 28 -noappend -nsteps -1 -maxh 6
 done
-
 
 # Extracting the number of native contacts for each frame for each part.
 for i in $temperatures;
@@ -836,7 +796,6 @@ do
   cd ..;
 done
 
-
 # This sequence will extract the potential energy for each frame and each part. 
 for i in $temperatures;
 do
@@ -858,8 +817,7 @@ do
 done
 wait; 
 
-# Now one have to compile all the parts results. Firstly, putting together the data (timestep, potential energy and contacts) of all files discarding the overlapping frames based on the timestep. For that, one can use the following routines.
-
+# Now one has to compile all the parts results. Firstly, putting together the data (timestep, potential energy, and contacts) of all files discarding the overlapping frames based on the timestep. For that, one can use the following routines.
 
 re='^[0-9]+([.][0-9]+)?$'
 for temp in $temperatures;
@@ -897,7 +855,7 @@ do
   cd ../
 done
 
-# Obs.: The simulation files were redivided in the last two temperatures to compy with GitHub storage limits.
+# Obs.: The simulation files were redivided in the last two temperatures to comply with GitHub storage limits.
 
 # Now compiling the results and splitting the files
 for i in $temperatures;
@@ -907,7 +865,7 @@ do
   cd ..;
 done
 
-# To run WHAM and keep the same sampling, one should made e-Q.dat using each 10 saved frames to keep the save frequency used in the other temperatures.
+# To run WHAM and keep the same sampling, one should make e-Q.dat using each 10 saved frames to keep the saving frequency used in the other temperatures.
 
 for i in $temperatures;
 do
@@ -920,16 +878,14 @@ do
   cd ..;
 done
 
-# Analyzing the current sampling on the temperature 119.7, from the free energy profile and the trajectory histogram it is clear that the unfolded state is more frequent, so the folding temperature should be smaller. 
-
 # To check an eventual change on the WHAM results, one may run:
 # Note that some features were changed in the configuration file. 
 # To run WHAM, one may go to the folder:
 
+mkdir wham/seventh
 cd wham/seventh;
 
 # And execute it:
-java -jar ~/proj-git/smog2/src/tools/WHAM.jar --config config_wham.txt 
-
+java -jar $SMOG_FOLDER/src/tools/WHAM.jar --config config_wham.txt
 cd ../../
 
