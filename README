@@ -3,21 +3,24 @@
                          README for SMOG2_tutorial
 
 
-SMOG2_tutorial is a repository made to support everyone who wants to start
-working with Structure-Based Models generated with SMOG 2 package.
-More information about the SMOG 2 package, its manual, codes, and other examples
-can be found at smog-server.org.
+SMOG2_tutorial is a repository made to support everyone who wants to start 
+working with Structure-Based Models generated with the SMOG 2 package.
+More information about the SMOG 2 package, its manual, codes, and other 
+examples can be found at smog-server.org.
 
 SMOG2_tutorial is an AGPL-3.0 licensed repository. See LICENSE for more details.
 
-This distribution contains the input and some output files obtained while
+This distribution contains the input and some output files obtained while 
 simulating the Chymotrypsin inhibitor 2 (CI-2) dynamics over a range of 
-temperatures, to check some of its properties. 
+temperatures to check some of its properties. Most results are due to an 
+all-atom representation of CI-2, where all non-hydrogen atoms were depicted by 
+spheres of unit radius. 
 
-The file "roadmap.txt" contains the set of commands to reproduce all the results.
-These commands were used in a Linux-based system, though small
-changes should be needed to use them in any Operational System. Each command (or
-set of commands) is preceded by comments on how they operate or what should be 
+The file "roadmap.txt" contains the set of commands to reproduce all the 
+results.
+These commands were used in a Linux-based system, though small changes should 
+be needed to use them in any Operational System. Each command (or set of 
+commands) is preceded by comments on how they operate or what should be 
 expected from it/them.
 
 To evaluate the number of native contacts formed at each frame, it is used a 
@@ -31,11 +34,31 @@ following the steps presented in the "roadmap.txt"
 
 The folder AA contains all the input files used in the simulations. The force 
 field files are there, with some output files acquired using the roadmap given. 
-Most heavy files were not saved to save the repository space (XTC, TRR, EDR, 
-and LOG files).
+Most heavy files were not kept to save the repository space (XTC, TRR, EDR, and 
+LOG files). Others have to be divided to comply with GitHub's storage policy.
 
 All comments, suggestions, questions, or feedback are welcomed. 
 Please reach out through the repository channel or by e-mail.
 
+IMPORTANT: type "git submodule update --init" to load all submodules needed.
+
+Suggestion: the up-to-date "roadmap.txt" file should be used to generate the 
+outputs, as it got some corrections along the path. The simulation results one 
+may get after each round might be similar to the commits of this repository. 
+As a random seed was chosen in GROMACS, one may get results that are not binary 
+equal to the repository, though the analysis should give the same overall 
+picture.
+
+To pull a specific simulation round (commit), you may type:
+"git checkout #commitnumber"
+where #commitnumber must be, in this case:
+cb44a85 -> for the first round
+57e8b2f -> for the second round
+1dee164 -> for the third round
+dd6c59c -> for the fourth round
+8fe9489 -> for the fifth round
+8ae7b1f -> fot the sixth round
+5ce27cb -> for the seventh round
 
 ################################################################################
+

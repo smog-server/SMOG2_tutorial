@@ -1,5 +1,8 @@
 #### Roadmap:
 
+# Command to check if the submodules were properly loaded.
+git submodule update --init
+
 # First we have to set some environmental variables
 
 # For example: which command is used to call GROMACS? If you are using an installation without MPI support, you might use "gmx". If you have MPI support, you might use "gmx_mpi", for example. Check your installation. In this case, it will be:
