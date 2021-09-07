@@ -1,51 +1,52 @@
 # To comply with GitHub storage policy, the trajectory file had to be divided. To get it, type:
 
 echo "Rebuilding the large trajectories"
-cat Q-119.5.part*dat >> Q-119.5.dat
-cat Q-119.7.part*dat >> Q-119.7.dat
-cat Q-118.7.part*dat >> Q-118.7.dat
-cat Q-118.3.part*dat >> Q-118.3.dat
+cat Q-119.5.segment*dat >> Q-119.5.dat
+cat Q-119.7.segment*dat >> Q-119.7.dat
+cat Q-118.7.segment*dat >> Q-118.7.dat
+cat Q-118.3.segment*dat >> Q-118.3.dat
 
 # To generate the analyzed parts:
 #
 
 echo "Start generating the parts needed to the analysis"
-head -n 1000000 Q-119.5.part1.dat > Q-119.5.part1-1st-tenth.dat
-head -n 5000000 Q-119.5.part1.dat > Q-119.5.part1-1st-half.dat
+head -n 1000000 Q-119.5.segment1.dat > Q-119.5.segment1-1M.dat
+head -n 5000000 Q-119.5.segment1.dat > Q-119.5.segment1-5M.dat
 
 #
 #
 
 for i in `seq 1 2`;
 do
-  echo "Adding part $i";
-  cat Q-119.5.part"$i".dat >> Q-119.5.part12.dat;
+  echo "Adding segment $i";
+  cat Q-119.5.segment"$i".dat >> Q-119.5.segment12.dat;
 done;
 
 for i in `seq 1 4`;
 do
-  echo "Adding part $i"
-  cat Q-119.5.part"$i".dat >> Q-119.5.part1234.dat
+  echo "Adding segment $i"
+  cat Q-119.5.segment"$i".dat >> Q-119.5.segment1234.dat
 done
 
 for i in `seq 6 9`;
 do
-  echo "Adding part $i"
-  cat Q-119.5.part"$i".dat >> Q-119.5.part6789.dat
+  echo "Adding segment $i"
+  cat Q-119.5.segment"$i".dat >> Q-119.5.segment6789.dat
 done
 
 for i in `seq 8 9`;
 do
-  echo "Adding part $i"
-  cat Q-119.5.part"$i".dat >> Q-119.5.part89.dat
+  echo "Adding segment $i"
+  cat Q-119.5.segment"$i".dat >> Q-119.5.segment89.dat
 done
 
 
-# To generate the stride parts
+# To generate the stride files
 #
 parentfile=Q-119.5.dat
 for stride in 2 3 5 10 50 100;
 do
+  echo "Creating the trajectory skipping every $stride frames."
   finalfile=Q-119.5-"$stride".dat
   head -n 1 $parentfile > $finalfile
   sed '1d' $parentfile > core.dat
