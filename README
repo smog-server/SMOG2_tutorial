@@ -44,21 +44,21 @@ IMPORTANT: type "git submodule update --init" to load all submodules needed.
 
 Suggestion: the up-to-date "roadmap.txt" file should be used to generate the 
 outputs, as it got some corrections along the path. The simulation results one 
-may get after each round might be similar to the commits of this repository. 
+may get after each iteration might be similar to the commits of this repository. 
 As a random seed was chosen in GROMACS, one may get results that are not binary 
 equal to the repository, though the analysis should give the same overall 
 picture.
 
-To pull a specific simulation round (commit), you may type:
+To pull a specific simulation iteration (commit), you may type:
 "git checkout #commitnumber"
 where #commitnumber must be, in this case:
-cb44a85 -> for the first round
-57e8b2f -> for the second round
-1dee164 -> for the third round
-dd6c59c -> for the fourth round
-8fe9489 -> for the fifth round
-8ae7b1f -> fot the sixth round
-5ce27cb -> for the seventh round
+cb44a85 -> for the first iteration
+57e8b2f -> for the second iteration
+1dee164 -> for the third iteration
+dd6c59c -> for the fourth iteration
+8fe9489 -> for the fifth iteration
+8ae7b1f -> fot the sixth iteration
+5ce27cb -> for the seventh iteration
 
 ################################################################################
 
